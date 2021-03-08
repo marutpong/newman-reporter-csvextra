@@ -1,6 +1,6 @@
-# Newman Reporter CSV
+# Newman Reporter CSV Extra
 
-Add CSV reports to your Newman runs.
+Add CSV (Extra) reports to your Newman runs.
 
 ## About
 
@@ -20,36 +20,38 @@ Each request in a collection run maps to a row in the outputted CSV file with th
 | executed | tests that passed | Status was 200, User was created |
 | failed | tests that failed | User has view permissions |
 | skipped | tests that were skipped | User had first name Joe |
-| body | the response body | { foo: "bar" } |
+| fullName | Full name of the request (Folder + Request Name) | Folder 1/Create user |
+| requestBody | the request body | { foo: "bar" } |
+| responsebody | the response body | { foo: "bar" } |
 > *Note: test names are comma separated | `body` is optional, see [Options](#options)*
 
 ## Setup
 Ensure you have Newman setup first:
 
 ```console
-npm install newman --save-dev
+npm install newman -g
 ```
 
 Then install this package:
 
 ```console
-npm install newman-reporter-csv --save-dev
+npm install newman-reporter-csvextra -g
 ```
 
 ## Usage
-You can then use the `-r csv` option to make Newman use the CSV reporter.
+You can then use the `-r csvextra` option to make Newman use the CSV (extra) reporter.
 
 ```console
-node_modules/.bin/newman run postman_collection.json -e postman_environment.json -r csv
+newman run postman_collection.json -e postman_environment.json -r csvextra
 ```
 
 ## Options
 
 | CLI Option | Description |
 | ------ | ------ |
-| --reporter-csv-export <path> | Specify a path where the output CSV file will be written to disk. If not specified, the file will be written to `newman/` in the current working directory. |
-| --reporter-csv-includeBody | If you wish to save the response body for each request, use this option. |
+| --reporter-csvextra-export <path> | Specify a path where the output CSV file will be written to disk. If not specified, the file will be written to `newman/` in the current working directory. |
+| --reporter-csvextra-noPretty | If you wish to save the response body for each request, use this option. |
 
 ```console
-node_modules/.bin/newman run postman_collection.json -e postman_environment.json -r csv --reporter-csv-includeBody
+newman run postman_collection.json -e postman_environment.json -r csvextra --reporter-csvextra-noPretty
 ```
