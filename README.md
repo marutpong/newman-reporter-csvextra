@@ -50,7 +50,7 @@ npx newman run postman_collection.json -e postman_environment.json -r csvextra
 | CLI Option | Description |
 | ------ | ------ |
 | --reporter-csvextra-export <path> | Specify a path where the output CSV file will be written to disk. If not specified, the file will be written to `newman/` in the current working directory. |
-| --reporter-csvextra-noPretty | If you wish to save the response body for each request, use this option. |
+| --reporter-csvextra-noPretty | Preserves the original request/response body instead of formatting with JSON Pretty Print  |
 
 ```console
 npx newman run postman_collection.json -e postman_environment.json -r csvextra --reporter-csvextra-noPretty
