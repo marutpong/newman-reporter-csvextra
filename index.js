@@ -56,7 +56,7 @@ const prettyJson = (object) => {
  * @param {String} options.noPretty - Whether the request/response body should be pretty formatted
  * @returns {*}
  */
-module.exports = function newmanCSVReporter (newman, options) {
+module.exports = function newmanCSVExtraReporter (newman, options) {
   // if (options.includeBody) {
   //   columns.push('requestBody')
   //   columns.push('responseBody')

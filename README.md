@@ -29,20 +29,20 @@ Each request in a collection run maps to a row in the outputted CSV file with th
 Ensure you have Newman setup first:
 
 ```console
-npm install newman -g
+npm install newman --save-dev
 ```
 
 Then install this package:
 
 ```console
-npm install newman-reporter-csvextra -g
+npm install newman-reporter-csvextra --save-dev
 ```
 
 ## Usage
 You can then use the `-r csvextra` option to make Newman use the CSV (extra) reporter.
 
 ```console
-newman run postman_collection.json -e postman_environment.json -r csvextra
+npx newman run postman_collection.json -e postman_environment.json -r csvextra
 ```
 
 ## Options
@@ -53,5 +53,5 @@ newman run postman_collection.json -e postman_environment.json -r csvextra
 | --reporter-csvextra-noPretty | If you wish to save the response body for each request, use this option. |
 
 ```console
-newman run postman_collection.json -e postman_environment.json -r csvextra --reporter-csvextra-noPretty
+npx newman run postman_collection.json -e postman_environment.json -r csvextra --reporter-csvextra-noPretty
 ```
