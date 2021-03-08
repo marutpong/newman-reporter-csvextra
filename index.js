@@ -84,7 +84,7 @@ module.exports = function newmanCSVExtraReporter (newman, options) {
     })
 
     try {
-      Object.assign(log, { requestBody: options.noPretty ? item.request.body.raw : prettyJson(item.request.body.raw) })
+      Object.assign(log, { requestBody: options.noPretty ? request.body.raw : prettyJson(request.body.raw) })
     } catch (error) {
       
     }
