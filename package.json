@@ -1,13 +1,13 @@
 {
-  "name": "newman-reporter-csv",
+  "name": "newman-reporter-csvextra",
   "version": "1.2.0",
-  "description": "A CSV reporter for Newman.",
+  "description": "A CSV (Extra) reporter for Newman.",
   "main": "index.js",
-  "author": "Matt Ball",
+  "author": "Marutpong Chailangka",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matt-ball/newman-reporter-csv.git"
+    "url": "git+https://github.com/marutpong/newman-reporter-csvextra.git"
   },
   "keywords": [
     "newman",
